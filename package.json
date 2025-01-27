@@ -1,0 +1,36 @@
+{
+  "name": "grpc-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "proto:gen": "npx protoc --ts_out src/proto --proto_path proto proto/shopping_list.proto",
+    "build": "tsc",
+    "start": "node dist/app/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaoreberti/grpc-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaoreberti/grpc-backend/issues"
+  },
+  "homepage": "https://github.com/joaoreberti/grpc-backend#readme",
+  "dependencies": {
+    "@protobuf-ts/plugin": "^2.9.4",
+    "fastify": "^5.2.1",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@protobuf-ts/runtime": "^2.9.4",
+    "@protobuf-ts/runtime-rpc": "^2.9.4",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "3.4.2"
+  }
+}

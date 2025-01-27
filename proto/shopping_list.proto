@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+service ShoppingList {
+    rpc createShoppingList (CreateShoppingListRequest) returns (CreateShoppingListResponse);
+    rpc updateShoppingList (updateShoppingListRequest) returns (updateShoppingListResponse);
+    rpc deleteShoppingList (deleteShoppingListRequest) returns (deleteShoppingListResponse);
+    rpc getShoppingList (getShoppingListRequest) returns (getShoppingListResponse);
+}
+
+
+message CreateShoppingListRequest {
+    repeated string items = 1;
+    string name = 2;
+}
+
+message CreateShoppingListResponse {
+    string id = 1;
+}
+
+message updateShoppingListRequest {
+    repeated string items_to_remove = 1;
+    repeated string items_to_add = 2;
+}
+
+message updateShoppingListResponse {
+    bool success = 1;
+    repeated string current_items = 2;
+}
+
+message deleteShoppingListRequest {
+    string id = 1;
+}
+
+message deleteShoppingListResponse {
+    bool success = 1;
+}
+
+message getShoppingListRequest {
+    string id = 1;
+}
+
+message getShoppingListResponse {
+    repeated string current_items = 1;
+}
+
