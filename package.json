@@ -22,6 +22,12 @@
   },
   "homepage": "https://github.com/joaoreberti/grpc-backend#readme",
   "dependencies": {
+    "@bufbuild/buf": "^1.50.0",
+    "@bufbuild/protobuf": "^2.2.3",
+    "@bufbuild/protoc-gen-es": "^2.2.3",
+    "@connectrpc/connect": "^2.0.1",
+    "@grpc/grpc-js": "^1.12.5",
+    "@grpc/proto-loader": "^0.7.13",
     "@protobuf-ts/plugin": "^2.9.4",
     "fastify": "^5.2.1",
     "typescript": "^5.7.3"
@@ -29,6 +35,7 @@
   "devDependencies": {
     "@protobuf-ts/runtime": "^2.9.4",
     "@protobuf-ts/runtime-rpc": "^2.9.4",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "prettier": "3.4.2"
